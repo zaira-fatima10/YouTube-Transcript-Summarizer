@@ -1,0 +1,64 @@
+body {
+    /* Gradient background for the body */
+    background: linear-gradient(to right, #a4e8cd, #edcfbd);
+    font-family: 'Arial', sans-serif;
+    width:fit-content; 
+    height: fit-content;/* Adjust the width to your preference */
+    margin: auto; /* Center the body horizontally */
+}
+
+h1 {
+    /* Styling for the heading */
+    color: #333;
+    text-align: center;
+}
+
+label {
+    /* Styling for the label */
+    display: block;
+    margin-top: 10px;
+}
+
+input {
+    /* Styling for the input field */
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+/* Styling for the buttons */
+#summarise {
+    background: linear-gradient(to right, #05394b, #79adf0);
+}
+
+#translate {
+    background: linear-gradient(to right, #86037e, #db8ff4);
+}
+
+#listen {
+    background: linear-gradient(to right, #515700, #c2dea4);
+}
+
+button {
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+button:hover {
+    /* Change button style on hover */
+    opacity: 0.8;
+}
+
+#output {
+    /* Styling for the output paragraph */
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
