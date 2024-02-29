@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const videoUrlInput = document.getElementById("videoUrl");
 
     btnSummarise.addEventListener("click", function() {
+        console.log("Summarise button clicked");
         var url = videoUrlInput.value;
         if (!url) {
             alert("Please enter a valid YouTube Video URL.");
@@ -16,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
         btnSummarise.innerHTML = "Summarising...";
 
         var xhr = new XMLHttpRequest();
-        xhr.open("GET", "http://127.0.0.1:5000/summary?url=" + url, true);
+        xhr.open("GET", "http://127.0.0.1:9989/summary?url=" + url, true);
         xhr.onload = function() {
             var text = xhr.responseText;
             output.innerHTML = text;
@@ -27,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     btnTranslate.addEventListener("click", function() {
+        console.log("Translate button clicked");
         var textToTranslate = output.innerText;
         if (!textToTranslate) {
             alert("No text to translate. Please summarize a video first.");
@@ -34,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         var xhr = new XMLHttpRequest();
-        xhr.open("POST", "http://127.0.0.1:5000/translate", true);
+        xhr.open("POST", "http://127.0.0.1:9989/translate", true);
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         xhr.onload = function() {
             var translatedText = xhr.responseText;
@@ -44,6 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     btnListen.addEventListener("click", function() {
+        console.log("Listen button clicked");
         var textToListen = output.innerText;
         if (!textToListen) {
             alert("No text to listen. Please summarize a video first.");
@@ -51,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         var xhr = new XMLHttpRequest();
-        xhr.open("POST", "http://127.0.0.1:5000/listen", true);
+        xhr.open("POST", "http://127.0.0.1:9989/listen", true);
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         xhr.onload = function() {
             alert("Voice generated");
