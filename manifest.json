@@ -3,8 +3,11 @@
     "name": "Youtube Summariser",
     "description": "An extension to summarize YouTube videos using the transcript",
     "version": "1.0",
-    "permissions": ["activeTab", "declarativeContent", "http://127.0.0.1:5000/"],
-    "host_permissions": ["http://127.0.0.1:5000/"],
+    "permissions": ["activeTab", "declarativeContent"],
+    "host_permissions": [
+        "http://127.0.0.1/",
+        "http://127.0.0.1:9989/"
+    ],
     "action": {
         "default_title": "Summarise this video",
         "default_popup": "home.html"
