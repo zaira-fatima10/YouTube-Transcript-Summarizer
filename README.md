@@ -11,7 +11,7 @@ Features
 Installation
 1.Clone the repository:
  
- git clone git clone https://github.com/zaira-fatima10/YouTube-Transcript-Summariser.git
+ git clone git clone https://github.com/zaira-fatima10/YouTube-Transcript-Summarizer
  
 
 2.Install the required Python packages:
